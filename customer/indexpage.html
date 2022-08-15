@@ -1,0 +1,226 @@
+<html>
+    <head>
+        <title>SCET Engineering</title>
+        <script src="/Users/svkpj/Desktop/AWPProject/Javascript/jquery.js"></script>
+        <script src="/Users/svkpj/Desktop/AWPProject/JavaScript/custom.js"></script>
+        <script src="/Users/svkpj/Desktop/AWPProject/JavaScript/jquery2.js"></script>
+        <script src="./indexpage.js"></script>
+
+        <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<link href="/docs/4.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<link href="/Users/svkpj/Desktop/LogisticsAndTransportation/css/blog.css" rel="stylesheet">
+<link rel="apple-touch-icon" sizes="180x180" href="https://png.pngtree.com/thumb_back/fw800/background/20190221/ourmid/pngtree-move-the-company-goods-transport-image_12000.jpg" />
+<link rel="icon" type="image/png" sizes="32x32" href="https://png.pngtree.com/thumb_back/fw800/background/20190221/ourmid/pngtree-move-the-company-goods-transport-image_12000.jpg" /><link rel="icon" type="image/png" sizes="16x16" href="/Users/svkpj/Desktop/AWPProject/images/scet.png" />
+<link href="/Users/svkpj/Desktop/AWPProject/css/formstyle.css" rel="stylesheet">
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+         body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  /*background: linear-gradient(135deg, #71b7e6, #9b59b6);*/
+  /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://png.pngtree.com/thumb_back/fw800/background/20190221/ourmid/pngtree-move-the-company-goods-transport-image_12000.jpg")
+      center/cover; */
+  
+ 
+}
+
+form {
+  /* opacity: 0.5; */
+}
+.container {
+  background: rgba(0, 0, 0, 0.5);
+  max-width: 700px;
+  width: 100%;
+  /* background-color: #fff; */
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.55);
+}
+.container .title {
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+.container .title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 283px;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #51b7e6, #ff7f50);
+}
+.content form .user-details {
+  /* filter: blur(2px); */
+  /* transform: translate(-50%,-50%); */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+form .user-details .input-box {
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+form .input-box span.details {
+  display: block;
+  color: white;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .input-box input {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.state {
+  display: block;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid {
+  border-color: #9b59b6;
+}
+form .gender-details .gender-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+form .category {
+  display: flex;
+  width: 80%;
+  margin: 14px 0;
+  justify-content: space-between;
+}
+form .category label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+form .category label .dot {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two,
+#dot-3:checked ~ .category label .three {
+  background: #9b59b6;
+  border-color: #d9d9d9;
+}
+form input[type="radio"] {
+  display: none;
+}
+form .button {
+  height: 45px;
+  margin: 35px 0;
+}
+form .button input {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #ff8080, #ffa07a);
+}
+form .button input:hover {
+  /* transform: scale(0.99); */
+  background: linear-gradient(-135deg, #71b7e6, #ff7f50);
+}
+@media (max-width: 584px) {
+  .container {
+    max-width: 100%;
+  }
+  form .user-details .input-box {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .category {
+    width: 100%;
+  }
+  .content form .user-details {
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar {
+    width: 5px;
+  }
+}
+@media (max-width: 459px) {
+  .container .content .category {
+    flex-direction: column;
+  }
+}
+</style>
+
+    
+</head>
+
+    <body>
+        <header class="blog-header py-5 form" style="padding-left: 50px;" >
+            <div class="text-center">
+                <img src="https://png.pngtree.com/thumb_back/fw800/background/20190221/ourmid/pngtree-move-the-company-goods-transport-image_12000.jpg" alt="SARVAJANIK UNIVERSITY" style="width: 350px; color: white" />
+            </div>
+            <div class="row flex-nowrap justify-content-between align-items-center">
+              
+              <div class="text-center">
+                <div class="blog-header-logo text-dark">Logistics and Transportation</div>
+                <br>
+                <div class="text-dark">Logtics and Transportation Company
+              </div>
+              
+              
+            </div>
+          </header>
+          
+          <br>
+          <div class="container">
+          <form class="from">
+         
+          <label for="username-email" class="input-box" style="color:linen; size: 14px;">Username/ Email</label>
+          <input type="text email" id="inputEmail" class="form-control" placeholder="Username/Email" required autofocus name="email"><br>
+
+          <label for="password" class="input-box" style="color:linen; size: 14px;">Password</label>
+          <input type="password" id="password" class="form-control" placeholder="Password" required autofocus name="password"><br>
+         
+          <a href="homepage.html"> <button class="btn btn-lg btn-primary btn-block" type="button" onclick="login()">Login</button></a>
+          <br>
+          <br>
+          <label for="newuser" class="input-box" style="color:linen; size: 14px;">New User? Register</label>
+          <br>
+          
+         
+         <a href="../customer/customerreg.html"> <button class="btn btn-lg btn-primary btn-block" type="button">Customer Registration</button></a>
+         <a href="../customer/companyreg.html"> <button class="btn btn-lg btn-primary btn-block" type="button">Company Registration</button></a>
+          <p class="mt-5 mb-3" style="color:lightgray;">&copy; 2021-2022</p>
+        </form>
+          </div>
+    </body>
+</html>

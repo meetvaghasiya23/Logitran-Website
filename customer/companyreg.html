@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)file:///C:/Users/Admin/Downloads/User_reg_form.html -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <title>Registration Form Logitran</title>
+    <link
+      rel="stylesheet"
+      href="./Registration Form Logitran_files/style.css"
+    />
+    <script src="./final_send.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        /*background: linear-gradient(135deg, #71b7e6, #9b59b6);*/
+        /* background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://png.pngtree.com/thumb_back/fw800/background/20190221/ourmid/pngtree-move-the-company-goods-transport-image_12000.jpg")
+      center/cover; */
+        background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20190221/ourmid/pngtree-move-the-company-goods-transport-image_12000.jpg");
+        background-size: 100%;
+        background-repeat: no-repeat;
+      }
+
+      form {
+        /* opacity: 0.5; */
+      }
+      .container {
+        background: rgba(0, 0, 0, 0.5);
+        max-width: 700px;
+        width: 100%;
+        /* background-color: #fff; */
+        padding: 25px 30px;
+        border-radius: 5px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.55);
+      }
+      .container .title {
+        font-size: 25px;
+        font-weight: 500;
+        position: relative;
+      }
+      .container .title::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        width: 283px;
+        border-radius: 5px;
+        background: linear-gradient(135deg, #51b7e6, #ff7f50);
+      }
+      .content form .user-details {
+        /* filter: blur(2px); */
+        /* transform: translate(-50%,-50%); */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 20px 0 12px 0;
+      }
+      form .user-details .input-box {
+        margin-bottom: 15px;
+        width: calc(100% / 2 - 20px);
+      }
+      form .input-box span.details {
+        display: block;
+        color: white;
+        font-weight: 500;
+        margin-bottom: 5px;
+      }
+      .user-details .input-box input {
+        height: 45px;
+        width: 100%;
+        outline: none;
+        font-size: 16px;
+        border-radius: 5px;
+        padding-left: 15px;
+        border: 1px solid #ccc;
+        border-bottom-width: 2px;
+        transition: all 0.3s ease;
+      }
+
+      .state {
+        display: block;
+      }
+
+      .user-details .input-box input:focus,
+      .user-details .input-box input:valid {
+        border-color: #9b59b6;
+      }
+      form .gender-details .gender-title {
+        font-size: 20px;
+        font-weight: 500;
+      }
+      form .category {
+        display: flex;
+        width: 80%;
+        margin: 14px 0;
+        justify-content: space-between;
+      }
+      form .category label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+      }
+      form .category label .dot {
+        height: 18px;
+        width: 18px;
+        border-radius: 50%;
+        margin-right: 10px;
+        background: #d9d9d9;
+        border: 5px solid transparent;
+        transition: all 0.3s ease;
+      }
+      #dot-1:checked ~ .category label .one,
+      #dot-2:checked ~ .category label .two,
+      #dot-3:checked ~ .category label .three {
+        background: #9b59b6;
+        border-color: #d9d9d9;
+      }
+      form input[type="radio"] {
+        display: none;
+      }
+      form .button {
+        height: 45px;
+        margin: 35px 0;
+      }
+      form .button input {
+        height: 100%;
+        width: 100%;
+        border-radius: 5px;
+        border: none;
+        color: #fff;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        background: linear-gradient(135deg, #ff8080, #ffa07a);
+      }
+      form .button input:hover {
+        /* transform: scale(0.99); */
+        background: linear-gradient(-135deg, #71b7e6, #ff7f50);
+      }
+      @media (max-width: 584px) {
+        .container {
+          max-width: 100%;
+        }
+        form .user-details .input-box {
+          margin-bottom: 15px;
+          width: 100%;
+        }
+        form .category {
+          width: 100%;
+        }
+        .content form .user-details {
+          max-height: 300px;
+          overflow-y: scroll;
+        }
+        .user-details::-webkit-scrollbar {
+          width: 5px;
+        }
+      }
+      @media (max-width: 459px) {
+        .container .content .category {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title" style="color: white">Company Registration</div>
+      <div class="content">
+        <form action="" class="form" name="companyForm">
+          <div class="user-details">
+            <div class="input-box">
+              <span class="details">Company Name*</span>
+              <input
+                type="text"
+                placeholder="Enter your name"
+                required=""
+                name="name"
+              />
+            </div>
+            <div class="input-box">
+              <span class="details">Owner Name*</span>
+              <input
+                type="text"
+                placeholder="Enter your username"
+                required=""
+              />
+            </div>
+            <div class="input-box">
+              <span class="details">Email*</span>
+              <input
+                type="text"
+                placeholder="Enter your email"
+                required=""
+                name="email"
+              />
+            </div>
+            <div class="input-box">
+              <span class="details">Mobile Number*</span>
+              <input
+                type="text"
+                placeholder="Enter your number"
+                required=""
+                name="contactNo"
+              />
+            </div>
+            <div class="input-box">
+              <span class="details">Password*</span>
+              <input
+                type="password"
+                placeholder="Enter your password"
+                required=""
+                name="password"
+              />
+            </div>
+            <div class="input-box">
+              <span class="details">Confirm Password*</span>
+              <input
+                type="password"
+                placeholder="Confirm your password"
+                required=""
+              />
+            </div>
+          </div>
+
+          <div class="state">
+            <div class="state_names" style="color: white">State*</div>
+
+            <select name="state" id="state" class="form-control">
+              <option value="">--Select State--</option>
+              <option value="Andhra Pradesh">Andhra Pradesh</option>
+              <option value="Andaman and Nicobar Islands">
+                Andaman and Nicobar Islands
+              </option>
+              <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+              <option value="Assam">Assam</option>
+              <option value="Bihar">Bihar</option>
+              <option value="Chandigarh">Chandigarh</option>
+              <option value="Chhattisgarh">Chhattisgarh</option>
+              <option value="Dadar and Nagar Haveli">
+                Dadar and Nagar Haveli
+              </option>
+              <option value="Daman and Diu">Daman and Diu</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Lakshadweep">Lakshadweep</option>
+              <option value="Puducherry">Puducherry</option>
+              <option value="Goa">Goa</option>
+              <option value="Gujarat">Gujarat</option>
+              <option value="Haryana">Haryana</option>
+              <option value="Himachal Pradesh">Himachal Pradesh</option>
+              <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+              <option value="Jharkhand">Jharkhand</option>
+              <option value="Karnataka">Karnataka</option>
+              <option value="Kerala">Kerala</option>
+              <option value="Madhya Pradesh">Madhya Pradesh</option>
+              <option value="Maharashtra">Maharashtra</option>
+              <option value="Manipur">Manipur</option>
+              <option value="Meghalaya">Meghalaya</option>
+              <option value="Mizoram">Mizoram</option>
+              <option value="Nagaland">Nagaland</option>
+              <option value="Odisha">Odisha</option>
+              <option value="Punjab">Punjab</option>
+              <option value="Rajasthan">Rajasthan</option>
+              <option value="Sikkim">Sikkim</option>
+              <option value="Tamil Nadu">Tamil Nadu</option>
+              <option value="Telangana">Telangana</option>
+              <option value="Tripura">Tripura</option>
+              <option value="Uttar Pradesh">Uttar Pradesh</option>
+              <option value="Uttarakhand">Uttarakhand</option>
+              <option value="West Bengal">West Bengal</option>
+            </select>
+          </div>
+          <br />
+          <textarea name="address" rows="4" cols="97"></textarea>
+          <div class="button">
+            <input type="submit" value="Register" onclick="dataconverter()" />
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
